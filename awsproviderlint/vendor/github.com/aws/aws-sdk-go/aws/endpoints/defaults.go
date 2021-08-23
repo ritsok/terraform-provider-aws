@@ -954,6 +954,7 @@ var awsPartition = partition{
 				"ap-east-1":      endpoint{},
 				"ap-northeast-1": endpoint{},
 				"ap-northeast-2": endpoint{},
+				"ap-northeast-3": endpoint{},
 				"ap-south-1":     endpoint{},
 				"ap-southeast-1": endpoint{},
 				"ap-southeast-2": endpoint{},
@@ -3327,6 +3328,7 @@ var awsPartition = partition{
 				"ap-east-1":      endpoint{},
 				"ap-northeast-1": endpoint{},
 				"ap-northeast-2": endpoint{},
+				"ap-northeast-3": endpoint{},
 				"ap-south-1":     endpoint{},
 				"ap-southeast-1": endpoint{},
 				"ap-southeast-2": endpoint{},
@@ -3659,6 +3661,18 @@ var awsPartition = partition{
 				},
 			},
 		},
+		"identity-chime": service{
+
+			Endpoints: endpoints{
+				"us-east-1": endpoint{},
+				"us-east-1-fips": endpoint{
+					Hostname: "identity-chime-fips.us-east-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "us-east-1",
+					},
+				},
+			},
+		},
 		"identitystore": service{
 
 			Endpoints: endpoints{
@@ -3752,18 +3766,49 @@ var awsPartition = partition{
 				"eu-west-1":      endpoint{},
 				"eu-west-2":      endpoint{},
 				"eu-west-3":      endpoint{},
-				"me-south-1":     endpoint{},
-				"sa-east-1":      endpoint{},
-				"us-east-1":      endpoint{},
-				"us-east-2":      endpoint{},
-				"us-west-1":      endpoint{},
-				"us-west-2":      endpoint{},
+				"fips-ca-central-1": endpoint{
+					Hostname: "iot-fips.ca-central-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"fips-us-east-1": endpoint{
+					Hostname: "iot-fips.us-east-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"fips-us-east-2": endpoint{
+					Hostname: "iot-fips.us-east-2.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"fips-us-west-1": endpoint{
+					Hostname: "iot-fips.us-west-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"fips-us-west-2": endpoint{
+					Hostname: "iot-fips.us-west-2.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"me-south-1": endpoint{},
+				"sa-east-1":  endpoint{},
+				"us-east-1":  endpoint{},
+				"us-east-2":  endpoint{},
+				"us-west-1":  endpoint{},
+				"us-west-2":  endpoint{},
 			},
 		},
 		"iotanalytics": service{
 
 			Endpoints: endpoints{
 				"ap-northeast-1": endpoint{},
+				"ap-south-1":     endpoint{},
 				"ap-southeast-2": endpoint{},
 				"eu-central-1":   endpoint{},
 				"eu-west-1":      endpoint{},
@@ -4541,6 +4586,18 @@ var awsPartition = partition{
 				"eu-west-2":      endpoint{},
 				"us-east-1":      endpoint{},
 				"us-west-2":      endpoint{},
+			},
+		},
+		"messaging-chime": service{
+
+			Endpoints: endpoints{
+				"us-east-1": endpoint{},
+				"us-east-1-fips": endpoint{
+					Hostname: "messaging-chime-fips.us-east-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "us-east-1",
+					},
+				},
 			},
 		},
 		"metering.marketplace": service{
@@ -8020,7 +8077,8 @@ var awscnPartition = partition{
 		"gamelift": service{
 
 			Endpoints: endpoints{
-				"cn-north-1": endpoint{},
+				"cn-north-1":     endpoint{},
+				"cn-northwest-1": endpoint{},
 			},
 		},
 		"glacier": service{
@@ -9553,6 +9611,18 @@ var awsusgovPartition = partition{
 				},
 			},
 			Endpoints: endpoints{
+				"fips-us-gov-east-1": endpoint{
+					Hostname: "iot-fips.us-gov-east-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
+				"fips-us-gov-west-1": endpoint{
+					Hostname: "iot-fips.us-gov-west-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Service: "execute-api",
+					},
+				},
 				"us-gov-east-1": endpoint{},
 				"us-gov-west-1": endpoint{},
 			},
@@ -10816,6 +10886,12 @@ var awsisoPartition = partition{
 				},
 			},
 		},
+		"route53resolver": service{
+
+			Endpoints: endpoints{
+				"us-iso-east-1": endpoint{},
+			},
+		},
 		"runtime.sagemaker": service{
 
 			Endpoints: endpoints{
@@ -11262,6 +11338,12 @@ var awsisobPartition = partition{
 			},
 		},
 		"swf": service{
+
+			Endpoints: endpoints{
+				"us-isob-east-1": endpoint{},
+			},
+		},
+		"tagging": service{
 
 			Endpoints: endpoints{
 				"us-isob-east-1": endpoint{},
